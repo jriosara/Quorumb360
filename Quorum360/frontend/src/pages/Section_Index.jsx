@@ -6,6 +6,12 @@ import image2 from '@/assets/image/image2.png';
 import image3 from '@/assets/image/image3.png';
 import image4 from '@/assets/image/image4.png';
 import image5 from '@/assets/image/image5.png';
+import test1 from '@/assets/image/test1.png';
+import test2 from '@/assets/image/test2.png';
+import test3 from '@/assets/image/test3.png';
+import test4 from '@/assets/image/test4.png';
+import test5 from '@/assets/image/test5.png';
+import test6 from '@/assets/image/test6.png';
 
 function Section_Index() {
     // Video Player Logic
@@ -214,37 +220,37 @@ function Section_Index() {
             name: "Juan Martínez",
             role: "Administrador de PH",
             text: "Quorum360 ha transformado la gestión de nuestra copropiedad. Ahora todo es más transparente y eficiente.",
-            image: "/src/assets/images/test1.png"
+            image: test1
         },
         {
             name: "Laura González",
             role: "Contadora Pública",
             text: "Para la contabilidad de las copropiedades, Quorum360 es la herramienta ideal. Me encanta cómo simplifica la generación de estados financieros.",
-            image: "/src/assets/images/test6.png"
+            image: test6
         },
         {
             name: "Andres Perez",
             role: "Ingeniero de Sistemas",
             text: "Como ingeniero de sistemas, puedo decir que Quorum360 tiene una infraestructura sólida y bien diseñada. Es confiable, segura y fácil de integrar con otros sistemas.",
-            image: "/src/assets/images/test3.png"
+            image: test3
         },
         {
             name: "María Fernanda Ruiz",
             role: "Propietaria en Copropiedad",
             text: "Quorum360 me ha permitido estar más involucrada en la gestión de mi edificio. Antes era difícil estar al tanto de las reuniones y decisiones importantes.",
-            image: "/src/assets/images/test4.png"
+            image: test4
         },
         {
             name: "Carlos Gómez",
             role: "Abogado",
             text: "Desde el punto de vista legal, Quorum360 ha sido una herramienta invaluable. Facilita la gestión documental y permite un registro claro de las decisiones en las asambleas.",
-            image: "/src/assets/images/test5.png"
+            image: test5
         },
         {
             name: "Paula López",
             role: "Gerente de Proyectos Inmobiliarios",
             text: "Quorum360 ha sido clave en varios proyectos que gestiono. Nos permite coordinar mejor con las administraciones de las propiedades, y el manejo de la información es impecable.",
-            image: "/src/assets/images/test2.png"
+            image: test2
         }
         // ... otros testimonios
     ];
@@ -309,6 +315,79 @@ function Section_Index() {
                 <div className="container">
                     <h2 id="features-heading" className="section-title">Funcionalidades Clave</h2>
                     <div className="features-grid">
+                    <article className="feature-card">
+                        <div className="feature-card__icon">
+                        {/* Icono de gestión de cobros */}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 13.5v-5a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3v3a.5.5 0 0 1-.5.5h-1a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        </div>
+                        <h3 className="feature-card__title">Gestión de Cobros</h3>
+                        <p className="feature-card__desc">Automatización de cobros recurrentes y generación de estados de cuenta.</p>
+                    </article>
+
+                    <article className="feature-card">
+                        <div className="feature-card__icon">
+                        {/* Icono de asambleas virtuales */}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-7 12H5v-2h8v2zm4-4H5v-2h12v2z"/>
+                        </svg>
+                        </div>
+                        <h3 className="feature-card__title">Asambleas Virtuales</h3>
+                        <p className="feature-card__desc">Realice asambleas con validez legal y participación remota.</p>
+                    </article>
+
+                    <article className="feature-card">
+                        <div className="feature-card__icon">
+                        {/* Icono de contabilidad */}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
+                        </svg>
+                        </div>
+                        <h3 className="feature-card__title">Contabilidad Integrada</h3>
+                        <p className="feature-card__desc">Reportes financieros automáticos y conciliación bancaria.</p>
+                    </article>
+
+                    <article className="feature-card">
+                        <div className="feature-card__icon">
+                        {/* Icono de gestión documental */}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zM6 20V4h7v5h5v11H6z"/>
+                        </svg>
+                        </div>
+                        <h3 className="feature-card__title">Gestión Documental</h3>
+                        <p className="feature-card__desc">Archivo digital de actas, reglamentos y comunicaciones.</p>
+                    </article>
+
+                    <article className="feature-card">
+                        <div className="feature-card__icon">
+                        {/* Icono de finanzas */}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1.5 15h-3v-2h3v2zm0-3.5h-3V23h3v-9.5zm0-5.5h-3V7h3v1z"/>
+                        </svg>
+                        </div>
+                        <h3 className="feature-card__title">Finanzas de Coopropiedad</h3>
+                        <p className="feature-card__desc">Gestión integral de las finanzas de la propiedad horizontal.</p>
+                    </article>
+
+                    <article className="feature-card">
+                        <div className="feature-card__icon">
+                        {/* Icono de gestión PQR */}
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-7 12h-2v-2h2v2zm0-4h-2V6h2v4z"/>
+                        </svg>
+                        </div>
+                        <h3 className="feature-card__title">Gestión de PQR</h3>
+                        <p className="feature-card__desc">Gestión eficiente de Peticiones, Quejas y Reclamos.</p>
+                    </article>
+                    </div>
+                </div>
+            </section>
+
+            {/* <section className="features" aria-labelledby="features-heading">
+                <div className="container">
+                    <h2 id="features-heading" className="section-title">Funcionalidades Clave</h2>
+                    <div className="features-grid">
                         <article className="feature-card">
                             <div className="feature-card__icon">
                                 <img src="/assets/icons/cobros.svg" alt="" aria-hidden="true" width="48" height="48" />
@@ -341,9 +420,25 @@ function Section_Index() {
                             <h3 className="feature-card__title">Gestión Documental</h3>
                             <p className="feature-card__desc">Archivo digital de actas, reglamentos y comunicaciones.</p>
                         </article>
+
+                        <article className="feature-card">
+                            <div className="feature-card__icon">
+                                <img src="/assets/icons/documentos.svg" alt="" aria-hidden="true" width="48" height="48" />
+                            </div>
+                            <h3 className="feature-card__title">Finanzas de Coopropiedad</h3>
+                            <p className="feature-card__desc">Gestión integral de las finanzas de la propiedad horizontal.</p>
+                        </article>
+
+                        <article className="feature-card">
+                            <div className="feature-card__icon">
+                                <img src="/assets/icons/documentos.svg" alt="" aria-hidden="true" width="48" height="48" />
+                            </div>
+                            <h3 className="feature-card__title">Gestion de PQR</h3>
+                            <p className="feature-card__desc">Gestión eficiente de Peticiones, Quejas y Reclamos.</p>
+                        </article>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* Gallery Section */}
             <section id="gallery" className="gallery" aria-label="Galería de imágenes de nuestros proyectos">

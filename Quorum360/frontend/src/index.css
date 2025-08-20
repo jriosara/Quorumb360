@@ -569,6 +569,12 @@ body {
   transform: scale(1.1) rotate(5deg);
 }
 
+.feature-card__icon svg {
+  width: 40px;
+  height: 40px;
+  fill: white;
+}
+
 .feature-card__title {
   font-size: 2rem;
   color: #1f3b4d;

@@ -1,0 +1,93 @@
+### Archivo para probar los endpoints de la API
+### Puedes usar este archivo con extensiones como REST Client en VS Code
+
+# Variables
+@baseUrl = http://localhost:5000/api
+@token = tu_token_aqui
+
+### 1. Health Check
+GET {{baseUrl}}/health
+
+### 2. Registro de Usuario
+POST {{baseUrl}}/users/register
+Content-Type: application/json
+
+{
+  "nombre": "Juan",
+  "apellido": "Pérez",
+  "correo": "juan.perez@example.com",
+  "telefono": "3001234567",
+  "pais": "colombia",
+  "nombrePropiedad": "Apartamento Vista Bella",
+  "tipo": "apartamento",
+  "numero": "101",
+  "contrasena": "Password123"
+}
+
+### 3. Login de Usuario
+POST {{baseUrl}}/users/login
+Content-Type: application/json
+
+{
+  "correo": "juan.perez@example.com",
+  "contrasena": "Password123"
+}
+
+### 4. Obtener Perfil (requiere token)
+GET {{baseUrl}}/users/profile
+Authorization: Bearer {{token}}
+
+### 5. Actualizar Perfil (requiere token)
+PUT {{baseUrl}}/users/profile
+Authorization: Bearer {{token}}
+Content-Type: application/json
+
+{
+  "nombre": "Juan Carlos",
+  "telefono": "3009876543",
+  "nombrePropiedad": "Apartamento Vista Bella Premium"
+}
+
+### 6. Obtener Todos los Usuarios (requiere token)
+GET {{baseUrl}}/users/all?page=1&limit=10
+Authorization: Bearer {{token}}
+
+### 7. Obtener Usuario por ID (requiere token)
+GET {{baseUrl}}/users/1
+Authorization: Bearer {{token}}
+
+### 8. Eliminar Usuario (requiere token)
+DELETE {{baseUrl}}/users/profile
+Authorization: Bearer {{token}}
+
+### 9. Prueba de error - Registro con datos duplicados
+POST {{baseUrl}}/users/register
+Content-Type: application/json
+
+{
+  "nombre": "María",
+  "apellido": "García",
+  "correo": "juan.perez@example.com",
+  "telefono": "3005551234",
+  "pais": "colombia",
+  "nombrePropiedad": "Casa Los Pinos",
+  "tipo": "casa",
+  "numero": "A-5",
+  "contrasena": "Password456"
+}
+
+### 10. Prueba de validación - Datos inválidos
+POST {{baseUrl}}/users/register
+Content-Type: application/json
+
+{
+  "nombre": "A",
+  "apellido": "",
+  "correo": "correo-invalido",
+  "telefono": "123",
+  "pais": "pais-inexistente",
+  "nombrePropiedad": "",
+  "tipo": "tipo-invalido",
+  "numero": "",
+  "contrasena": "123"
+}

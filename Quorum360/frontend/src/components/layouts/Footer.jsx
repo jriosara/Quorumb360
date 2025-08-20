@@ -7,6 +7,7 @@ import {
     faLinkedinIn, 
     faYoutube 
 } from '@fortawesome/free-brands-svg-icons';
+import imagen1 from '../../assets/image/Q360.png';
 
 function Footer() {
     // Establece el año actual
@@ -38,7 +39,7 @@ function Footer() {
                 <div className="footer-grid">
                     <div className="footer-logo">
                         <img 
-                            src="/src/assets/images/Q360.png" 
+                            src={imagen1} 
                             alt="Quorum360 Logo" 
                             className="logo-img" 
                             loading="lazy"

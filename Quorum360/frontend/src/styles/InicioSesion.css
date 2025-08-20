@@ -61,7 +61,7 @@ body {
     left: -50%;
     width: 200%;
     height: 200%;
-    background: url('/src/assets/images/Q360.png') center/contain no-repeat;
+    background: url('/src/assets/image/Q360.png') center/contain no-repeat;
     opacity: 0.05;
     animation: rotate 30s linear infinite;
 }

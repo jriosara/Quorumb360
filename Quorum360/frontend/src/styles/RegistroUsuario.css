@@ -108,12 +108,14 @@ body {
 
 .registration-container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
     max-width: 600px;
     background-color: var(--color-light);
     border-radius: 10px;
     box-shadow: var(--shadow-md);
     padding: 2.5rem;
-    margin-top: 1rem;
+    margin-top: 10rem;
     position: relative;
     overflow: hidden;
 }
@@ -130,8 +132,8 @@ body {
 
 .registration-header {
     text-align: center;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
 }
 
 .registration-header h2 {
@@ -146,17 +148,17 @@ body {
 
 .registration-form {
     display: grid;
-    gap: 1.5rem;
+    gap: 0.3rem;
 }
 
 .form-row {
     display: flex;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 
 .form-group {
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .form-group label {
@@ -232,7 +234,7 @@ body {
 }
 
 .country-code-selector select {
-    padding-left: 2.5rem;
+    padding-left: 1.5rem;
     background-image: url('https://flagcdn.com/w20/co.png');
     background-repeat: no-repeat;
     background-position: 0.5rem center;
@@ -624,3 +626,159 @@ width: 100%;
           transform: translateY(0);
       }
   }
+
+  /* Estilos para el selector de país mejorado */
+.phone-input-container {
+  margin-bottom: 1.5rem;
+}
+
+.phone-input-container label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.phone-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.country-selector-container {
+  position: relative;
+  width: 100%;
+}
+
+.country-select {
+  width: 100%;
+  padding: 12px 15px 12px 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+  appearance: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+}
+
+.country-select:focus {
+  outline: none;
+  border-color: #17bebb;
+  box-shadow: 0 0 0 3px rgba(23, 190, 187, 0.2);
+}
+
+.country-select.error {
+  border-color: #e74c3c;
+}
+
+.selected-flag {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+}
+
+.selected-flag img {
+  width: 20px;
+  height: 15px;
+  object-fit: cover;
+  border-radius: 2px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+}
+
+.phone-number-input {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.country-code-prefix {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #666;
+  z-index: 1;
+  font-weight: 500;
+}
+
+.phone-number-input .form-control {
+  padding-left: 50px;
+} 
+
+/* Flecha personalizada del select */
+.country-selector-container::after {
+  content: "";
+  position: absolute;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666;
+  pointer-events: none;
+}
+
+/* Estilos para las opciones (solo funciona en algunos navegadores) */
+.country-select option {
+  padding-left: 40px;
+  background-repeat: no-repeat;
+  background-position: 10px center;
+  background-size: 20px 15px;
+}
+
+.country-select option[value="co"] {
+  background-image: url('https://flagcdn.com/w20/co.png');
+}
+
+.country-select option[value="mx"] {
+  background-image: url('https://flagcdn.com/w20/mx.png');
+}
+
+.country-select option[value="ar"] {
+  background-image: url('https://flagcdn.com/w20/ar.png');
+}
+
+.country-select option[value="cl"] {
+  background-image: url('https://flagcdn.com/w20/cl.png');
+}
+
+.country-select option[value="pe"] {
+  background-image: url('https://flagcdn.com/w20/pe.png');
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .phone-input-wrapper {
+    flex-direction: column;
+  }
+  
+  .country-select {
+    padding: 10px 12px 10px 40px;
+    font-size: 14px;
+  }
+  
+  .selected-flag {
+    left: 12px;
+  }
+  
+  .selected-flag img {
+    width: 18px;
+    height: 13px;
+  }
+  
+  .country-code-prefix {
+    left: 12px;
+    font-size: 14px;
+  }
+  
+  .phone-number-input .form-control {
+    padding-left: 45px;
+  }
+}

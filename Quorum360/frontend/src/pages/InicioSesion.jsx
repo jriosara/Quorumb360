@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faExclamationCircle, faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
+import logo from '../assets/image/Q360.png'; // Asegúrate de que la ruta sea correcta
 import '@/styles/InicioSesion.css';
 
 const InicioSesion = () => {
@@ -79,7 +80,7 @@ const InicioSesion = () => {
           <p>La solución integral para la gestión eficiente de propiedades horizontales</p>
           <div className="login-logo">
             <Link to="/" className="logo-inicio">
-              <img src="/src/assets/images/Q360.png" alt="Quorum360" loading="lazy" className="logo-img" />
+              <img src={logo} alt="Quorum360" loading="lazy" className="logo-img" />
             </Link>
           </div>
         </div>

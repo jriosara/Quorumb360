@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { userService } from '../services/api'; // Importa el servicio
+import { Link } from 'react-router-dom';
 import '../styles/RegistroUsuario.css';
 import logo from '../assets/image/Q360.png';
 
@@ -133,8 +134,8 @@ const RegistroUsuario = () => {
       alert('¡Usuario registrado exitosamente!');
       
       // Redirigir al login
-      navigate('/login', { 
-        state: { 
+      navigate('/login', {
+        state: {
           registrationSuccess: true,
           message: 'Registro exitoso. Por favor, inicie sesión.'
         }
@@ -163,7 +164,10 @@ const RegistroUsuario = () => {
         {/* Sección Hero */}
         <section className="hero-section">
           <div className="hero-content">
-            <img src={logo} alt="Quorum360" className="hero-logo" />
+            {/* <img src={logo} alt="Quorum360" className="hero-logo" /> */}
+            <Link to="/" className="hero-logo">
+              <img src={logo} alt="Quorum360" loading="lazy" className="hero-logo" />
+            </Link>
             <h1>Únete a Quorum360</h1>
             <p>La solución integral para la gestión eficiente de propiedades horizontales</p>
           </div>

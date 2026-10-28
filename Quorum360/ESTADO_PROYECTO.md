@@ -19,3 +19,5 @@ Fecha de revisión: 27 de octubre de 2026
 - Verificar el inicio del frontend.
 - Ejecutar pruebas de integración entre frontend y backend.
 - Validar las operaciones de lectura y escritura en MySQL.
+
+Última revisión documental: 27 de octubre de 2026.
